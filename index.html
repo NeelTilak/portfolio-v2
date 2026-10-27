@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+  <!-- SEO Meta Tags -->
+  <title>Neel Tilak — Backend &amp; Cloud Platform Engineer | Mumbai, India</title>
+  <meta name="description" content="Portfolio of Neel Tilak — Backend &amp; Cloud Platform Engineer based in Mumbai, India. I build backend systems from ambiguous requirements to production: private cloud, distributed workers, and recurring-payment billing."/>
+  <meta name="keywords" content="Neel Tilak, Backend Engineer, Cloud Platform Engineer, C#, .NET 8, ASP.NET Core, RabbitMQ, Private Cloud, IaaS, HAProxy, Edge Firewalls, SDN, Razorpay, Mumbai"/>
+  <meta name="author" content="Neel Tilak"/>
+  <link rel="canonical" href="https://neeltilak.netlify.app/"/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://neeltilak.netlify.app/"/>
+  <meta property="og:title" content="Neel Tilak — Backend &amp; Cloud Platform Engineer"/>
+  <meta property="og:description" content="I build backend systems from ambiguous requirements to production: private cloud, distributed workers, and recurring-payment billing."/>
+  <meta property="og:image" content="assets/images/case-indryom.jpg"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Neel Tilak — Backend &amp; Cloud Platform Engineer"/>
+  <meta name="twitter:description" content="I build backend systems from ambiguous requirements to production: private cloud, distributed workers, and recurring-payment billing."/>
+  <meta name="twitter:image" content="assets/images/case-indryom.jpg"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/terminal.css"/>
+  <link rel="stylesheet" href="css/palette.css"/>
+  <link rel="stylesheet" href="css/chat.css"/>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Neel Tilak",
+    "jobTitle": "Backend & Cloud Platform Engineer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressCountry": "India"
+    },
+    "email": "neeltilak.1998@gmail.com",
+    "url": "https://neeltilak.netlify.app",
+    "sameAs": [
+      "https://linkedin.com/in/neel-tilak-74734b231"
+    ],
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Rajiv Gandhi Institute of Technology, Mumbai University"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Pravin Patil College of Diploma Engineering & Technology, MSBTE"
+      }
+    ],
+    "knowsAbout": [
+      "C#",
+      "ASP.NET Core 8",
+      "Private Cloud (IaaS)",
+      "Distributed Workers",
+      "RabbitMQ",
+      "HAProxy",
+      "Edge Firewall Appliances & SDN",
+      "SQL Server",
+      "PostgreSQL",
+      "Razorpay e-NACH",
+      "Type-1 hypervisor REST APIs (KVM/QEMU)"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Neural Constellation Canvas -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" id="nav-brand-logo">
+        <div class="brand-icon">NT</div>
+        <div class="brand-text">Neel Tilak</div>
+        <span class="brand-badge">BACKEND // CLOUD</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+        <li><a href="#open-source" class="nav-link">Open Source</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#notes" class="nav-link">Notes</a></li>
+        <li><a href="/cover-letter.html" class="nav-link">Cover Letter</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cmd-k-btn cmd-k-trigger" id="cmd-k-btn" aria-label="Open Command Palette">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Cmd K</span>
+          <span class="cmd-k-badge">⌘K</span>
+        </button>
+
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle visual theme">
+          <i class="fa-regular fa-sun"></i>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>Open to Backend / Platform Engineer roles · Mumbai, India</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="title-gradient">Neel Tilak</span>
+          </h1>
+
+          <div class="typewriter-wrapper">
+            <span class="typewriter-prefix">neel@platform:~$</span>
+            <span class="typewriter-role" id="typewriter-role"></span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-desc" style="font-size:1.15rem;color:var(--text-primary);font-weight:500;">
+            "I build backend systems from ambiguous requirements to production: private cloud, distributed workers, and recurring-payment billing."
+          </p>
+
+          <div class="hero-actions">
+            <a href="#case-studies" class="btn btn-primary" id="hero-cta-cases">
+              <i class="fa-solid fa-server"></i>
+              <span>View Case Studies</span>
+            </a>
+            <a href="/resume.pdf" download="Neel_Tilak_Resume.pdf" class="btn btn-secondary" id="hero-cta-resume">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Resume (PDF)</span>
+            </a>
+            <a href="/cover-letter.html" class="btn btn-secondary" id="hero-cta-coverletter">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>Cover Letter</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost" id="hero-cta-contact">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Contact</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://linkedin.com/in/neel-tilak-74734b231" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/NeelTilak" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub (NeelTilak)" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:neeltilak.1998@gmail.com" class="social-link copy-email-btn" data-email="neeltilak.1998@gmail.com" title="Copy Email" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="/resume.pdf" download="Neel_Tilak_Resume.pdf" class="social-link" title="Download Resume (/resume.pdf)" aria-label="Resume">
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
+            <button class="social-link cmd-k-trigger" title="Command Palette (Cmd+K)" aria-label="Command Palette">
+              <i class="fa-solid fa-keyboard"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <img src="assets/images/avatar.jpg" alt="Neel Tilak - Backend &amp; Cloud Platform Engineer" class="avatar-img" id="hero-avatar-img"/>
+          </div>
+
+          <div class="floating-chip chip-1">
+            <i class="fa-solid fa-cloud"></i>
+            <span>Private Cloud (IaaS)</span>
+          </div>
+          <div class="floating-chip chip-2">
+            <i class="fa-solid fa-gears"></i>
+            <span>Distributed Workers</span>
+          </div>
+          <div class="floating-chip chip-3">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Recurring e-NACH Billing</span>
+          </div>
+          <div class="floating-chip chip-4">
+            <i class="fa-solid fa-network-wired"></i>
+            <span>Layer 4 Load Balancing</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" id="hero-scroll-cue">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span>SCROLL DOWN</span>
+      </a>
+    </section>
+
+    <!-- 2. About Section (Exactly 3 sentences) -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="glass-panel" style="padding:3.5rem;max-width:960px;margin:0 auto;">
+          <div class="section-tag">// 01. ABOUT ME</div>
+          <h2 class="section-title" style="margin-bottom:1.75rem;text-align:left;">Engineering Production Systems</h2>
+
+          <div class="hero-status-pill" style="margin-bottom:2rem;background:rgba(139,92,246,0.1);border-color:var(--border-accent);color:var(--text-primary);">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--accent-purple);box-shadow:0 0 10px var(--accent-purple);"></div>
+            <span><strong>Location:</strong> Mumbai, India · <strong>Status:</strong> Open to Backend / Platform Engineer roles</span>
+          </div>
+
+          <!-- Exactly 3 sentences -->
+          <div style="color:var(--text-secondary);font-size:1.1rem;line-height:1.85;display:flex;flex-direction:column;gap:1.25rem;">
+            <p>
+              I am a Backend and Cloud Platform Engineer based in Mumbai, India, specializing in turning ambiguous technical requirements into resilient, production-ready infrastructure.
+            </p>
+            <p>
+              My core expertise centers on private cloud (IaaS) automation, distributed background worker pipelines, high-availability Layer 4 load balancing, and automated recurring-payment billing systems.
+            </p>
+            <p>
+              With a strong foundation in C#, ASP.NET Core 8, Linux, RabbitMQ, and relational database architecture, I engineer reliable, observable platforms that maintain strict data integrity and high uptime.
+            </p>
+          </div>
+
+          <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1rem;">
+            <a href="/resume.pdf" download="Neel_Tilak_Resume.pdf" class="btn btn-primary">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download Resume (/resume.pdf)</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="about-query-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send a Query</span>
+            </a>
+            <a href="mailto:neeltilak.1998@gmail.com" class="btn btn-secondary copy-email-btn" data-email="neeltilak.1998@gmail.com">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copy Email (neeltilak.1998@gmail.com)</span>
+            </a>
+            <a href="#case-studies" class="btn btn-ghost">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span>Explore Case Studies</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal Console (Developer Utility) -->
+    <section class="section terminal-section" id="terminal-section" style="padding:3rem 0;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:2rem;">
+          <div class="section-tag">// INTERACTIVE PLATFORM CLI</div>
+          <h2 class="section-title" style="font-size:2rem;">Developer Telemetry &amp; Shell</h2>
+        </div>
+
+        <div class="terminal-window" id="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <button class="term-btn term-btn-red" id="term-btn-red" title="Clear Screen"></button>
+              <button class="term-btn term-btn-yellow" id="term-btn-yellow" title="Minimize / Collapse"></button>
+              <button class="term-btn term-btn-green" id="term-btn-green" title="Toggle Fullscreen"></button>
+            </div>
+            <div class="terminal-title">
+              <i class="fa-solid fa-terminal"></i>
+              <span>neel@platform:~ (bash)</span>
+            </div>
+            <div style="width:50px;"></div>
+          </div>
+
+          <div class="terminal-shortcuts-bar">
+            <span class="term-chip-label">Quick Run:</span>
+            <button class="term-chip" data-cmd="help">help</button>
+            <button class="term-chip" data-cmd="about">about</button>
+            <button class="term-chip" data-cmd="skills">skills</button>
+            <button class="term-chip" data-cmd="projects">projects</button>
+            <button class="term-chip" data-cmd="exp">exp</button>
+            <button class="term-chip" data-cmd="education">education</button>
+            <button class="term-chip" data-cmd="resume">resume</button>
+            <button class="term-chip" data-cmd="coverletter">coverletter</button>
+            <button class="term-chip" data-cmd="neofetch">neofetch</button>
+            <button class="term-chip" data-cmd="matrix">matrix</button>
+            <button class="term-chip" data-cmd="clear">clear</button>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <!-- Populated via terminal.js -->
+          </div>
+
+          <div style="padding:0.75rem 1.5rem;background:var(--term-bg);border-top:1px solid var(--term-border);">
+            <div class="terminal-prompt-line">
+              <span class="term-prompt">neel</span><span class="term-path">@platform</span><span class="term-symbol">:~$ </span>
+              <div class="term-input-wrapper">
+                <input type="text" class="terminal-input" id="terminal-input" placeholder="Type a command (try 'projects', 'skills', or 'neofetch')..." autocomplete="off" spellcheck="false"/>
+              </div>
+            </div>
+          </div>
+
+          <canvas id="matrix-canvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Case Studies Section -->
+    <section class="section" id="case-studies">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 02. PRODUCTION ARCHITECTURE</div>
+          <h2 class="section-title">Case Studies &amp; Platform Systems</h2>
+          <p class="section-desc">
+            Deep-dive production systems engineered from ambiguous requirements into reliable, multi-tenant cloud platforms.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Case A: Indryom -->
+          <article class="project-card" data-category="cloud">
+            <div class="project-thumbnail">
+              <img src="assets/images/case-indryom.jpg" alt="Indryom Private Cloud IaaS Architecture Diagram" loading="lazy"/>
+              <span class="project-badge-overlay">Private Cloud (IaaS)</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Indryom</h3>
+              <p class="project-desc">
+                Private Cloud Infrastructure Platform (IaaS). Automated VM &amp; container lifecycle provisioning via Type-1 hypervisor REST APIs (KVM/QEMU), Layer 4 HAProxy load balancing, edge firewall automation, and RabbitMQ workers.
+              </p>
+              <div class="project-metric">
+                <i class="fa-solid fa-gauge-high"></i>
+                <span>Cold boot &lt;30s · L4 routing &lt;5ms</span>
+              </div>
+              <div class="project-tags">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">ASP.NET Core 8</span>
+                <span class="tech-tag">RabbitMQ</span>
+                <span class="tech-tag">HAProxy</span>
+                <span class="tech-tag">SDN &amp; Firewalls</span>
+                <span class="tech-tag">EF Core</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">Azure AD</span>
+              </div>
+              <div style="margin-bottom:1rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted);">
+                Scale: <span class="todo-pill">[TODO: X tenants]</span> · <span class="todo-pill">[TODO: Y VMs managed]</span> · <span class="todo-pill">[TODO: Z% auto-debit success]</span>
+              </div>
+              <div class="project-actions">
+                <button class="modal-open-btn" data-project="indryom">
+                  <span>Architecture Deep Dive</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case B: SaturnnLGD -->
+          <article class="project-card" data-category="logistics">
+            <div class="project-thumbnail">
+              <img src="assets/images/case-saturnnlgd.jpg" alt="SaturnnLGD Luxury Diamond Logistics Workflow" loading="lazy"/>
+              <span class="project-badge-overlay">E-Commerce &amp; Logistics</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">SaturnnLGD</h3>
+              <p class="project-desc">
+                Luxury Diamond E-Commerce &amp; Custom Logistics. Built a custom Blue Dart carrier integration plugin (REST/SOAP specs) for high-value shipping: digital waybills, pickup scheduling, tracking webhooks, and PDF tax invoices.
+              </p>
+              <div class="project-metric">
+                <i class="fa-solid fa-gem"></i>
+                <span>Carrier REST/SOAP Bridge · Razorpay Webhooks</span>
+              </div>
+              <div class="project-tags">
+                <span class="tech-tag">ASP.NET Core 8</span>
+                <span class="tech-tag">MVC Admin</span>
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">WooCommerce</span>
+                <span class="tech-tag">PHP Plugin</span>
+                <span class="tech-tag">Blue Dart APIs</span>
+                <span class="tech-tag">Razorpay</span>
+              </div>
+              <div class="project-actions">
+                <button class="modal-open-btn" data-project="saturnnlgd">
+                  <span>Architecture Deep Dive</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case C: KIFS Home Loan -->
+          <article class="project-card" data-category="fintech">
+            <div class="project-thumbnail">
+              <img src="assets/images/case-kifs.jpg" alt="KIFS Home Loan Origination Architecture" loading="lazy"/>
+              <span class="project-badge-overlay">Digital Lending (Fintech)</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">KIFS Home Loan</h3>
+              <p class="project-desc">
+                Digital Lending &amp; Origination Platform. Mobile loan origination with digital KYC document capture, multi-stage approval workflow, credit bureau evaluation hooks, and real-time customer status tracking.
+              </p>
+              <div class="project-metric">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>Digital KYC · Multi-Stage Underwriting</span>
+              </div>
+              <div class="project-tags">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">ASP.NET Core 8</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">NGINX</span>
+                <span class="tech-tag">REST APIs</span>
+              </div>
+              <div class="project-actions">
+                <button class="modal-open-btn" data-project="kifs">
+                  <span>Architecture Deep Dive</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case D: EasyAccounts -->
+          <article class="project-card" data-category="saas">
+            <div class="project-thumbnail">
+              <img src="assets/images/case-easyaccounts.jpg" alt="EasyAccounts Multi-Tenant Cloud Architecture" loading="lazy"/>
+              <span class="project-badge-overlay">Multi-Tenant SaaS</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">EasyAccounts</h3>
+              <p class="project-desc">
+                Multi-Tenant SaaS Accounting &amp; Ledgers. Tenant-isolated database architecture for cloud accounting and ledgers, ensuring strict data segregation across client organizations.
+              </p>
+              <div class="project-metric">
+                <i class="fa-solid fa-building"></i>
+                <span>Tenant-Isolated DB Architecture</span>
+              </div>
+              <div class="project-tags">
+                <span class="tech-tag">.NET 8</span>
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">EF Core</span>
+              </div>
+              <div class="project-actions">
+                <button class="modal-open-btn" data-project="easyaccounts">
+                  <span>Architecture Deep Dive</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Open-Source Projects Section -->
+    <section class="section" id="open-source">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 03. OPEN SOURCE</div>
+          <h2 class="section-title">Open-Source Engines &amp; Systems</h2>
+          <p class="section-desc">
+            Extracted platform subsystems and standalone infrastructure components available on GitHub.
+          </p>
+        </div>
+
+        <div class="oss-grid">
+          
+          <!-- OSS 1: Mini Cloud Control Plane -->
+          <div class="oss-card">
+            <div class="oss-card-header">
+              <div class="oss-icon-box">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <span class="tech-tag">ASP.NET Core 8</span>
+            </div>
+            <h3 class="oss-title">Mini Cloud Control Plane</h3>
+            <p class="oss-desc">
+              A distributed cloud control plane prototype built with ASP.NET Core 8, EF Core, and RabbitMQ. Features a mock Type-1 hypervisor REST API, finite state machine for VM lifecycle, resource quotas, and asynchronous storage reconciliation worker.
+            </p>
+            <div class="project-tags" style="margin-bottom:1.25rem;">
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">RabbitMQ</span>
+              <span class="tech-tag">EF Core</span>
+              <span class="tech-tag">State Machine</span>
+              <span class="tech-tag">Reconciliation</span>
+            </div>
+            <a href="https://github.com/NeelTilak" target="_blank" rel="noopener noreferrer" class="oss-link" title="GitHub Repository">
+              <i class="fa-brands fa-github"></i>
+              <span>github.com/NeelTilak →</span>
+            </a>
+          </div>
+
+          <!-- OSS 2: Recurring Billing Engine -->
+          <div class="oss-card">
+            <div class="oss-card-header">
+              <div class="oss-icon-box">
+                <i class="fa-solid fa-rotate"></i>
+              </div>
+              <span class="tech-tag">Payments &amp; Workers</span>
+            </div>
+            <h3 class="oss-title">Recurring Billing Engine</h3>
+            <p class="oss-desc">
+              Resilient subscription billing engine configured for Razorpay test mode. Implements idempotent webhook processing, exponential backoff retries on debit failure, and automatic RabbitMQ-driven tenant account suspension after grace period expiration.
+            </p>
+            <div class="project-tags" style="margin-bottom:1.25rem;">
+              <span class="tech-tag">Razorpay</span>
+              <span class="tech-tag">RabbitMQ</span>
+              <span class="tech-tag">Idempotent Webhooks</span>
+              <span class="tech-tag">Exponential Backoff</span>
+            </div>
+            <a href="https://github.com/NeelTilak" target="_blank" rel="noopener noreferrer" class="oss-link" title="GitHub Repository">
+              <i class="fa-brands fa-github"></i>
+              <span>github.com/NeelTilak →</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Experience Timeline Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 04. CHRONICLE</div>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-desc">
+            Production engineering progression building private clouds, microservices, and client platforms.
+          </p>
+        </div>
+
+        <div class="timeline">
+          
+          <!-- Experience 1: Hirdhav -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Software Developer / Cloud Infrastructure Engineer</h3>
+                <span class="timeline-badge">MAR 2024 — PRESENT</span>
+              </div>
+              <div class="timeline-company">Hirdhav Software Pvt Ltd · Mumbai, India</div>
+              <ul class="timeline-list">
+                <li>Built "Indryom", a private cloud (IaaS) platform, as the primary backend engineer, automating VM/container provisioning via Type-1 hypervisor REST APIs (KVM/QEMU) with sub-30 second cold boots.</li>
+                <li>Engineered high-availability Layer 4 HAProxy load balancing service with dynamic reloads (&lt;5ms routing latency) and automated edge firewall gateways (1:1 NAT, DNAT, VXLAN tenant isolation).</li>
+                <li>Delivered two client products end to end: SaturnnLGD (custom Blue Dart carrier integration plugin &amp; Razorpay) and KIFS Home Loan (digital loan origination with KYC capture).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 2: Terado -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Jr Backend Developer</h3>
+                <span class="timeline-badge">DEC 2023 — MAR 2024</span>
+              </div>
+              <div class="timeline-company">Terado Engineering · Mumbai, India</div>
+              <ul class="timeline-list">
+                <li>Developed Node.js / Express / Sequelize / MySQL microservices for an HRMS platform featuring geolocation-based attendance verification.</li>
+                <li>Built CRM backend pipelines for lead management workflows and real-time environmental alert monitoring.</li>
+                <li>Conducted SQL query optimization, database indexing, and rigorous automated API testing.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 3: Freelance -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Freelance Software Developer</h3>
+                <span class="timeline-badge">JUNE 2023 — NOV 2023</span>
+              </div>
+              <div class="timeline-company">Independent Contracting · Mumbai, India</div>
+              <ul class="timeline-list">
+                <li>Delivered full-stack web modules and mobile prototypes for private clients using .NET and React.</li>
+                <li>Engineered single sign-on (SSO) authentication flows and secure payment gateway integrations.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Skills Section (Grouped as Two Clear Levels) -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 05. TECHNICAL CAPABILITIES</div>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-desc">
+            Grouped into two clear tiers: technologies used daily in production and adjacent platforms worked with.
+          </p>
+        </div>
+
+        <div class="skills-tier-grid">
+          
+          <!-- Tier 1: Daily Stack -->
+          <div class="tier-card" style="border-color:var(--border-accent);">
+            <div class="tier-header">
+              <div class="tier-icon" style="color:var(--accent-purple-light);background:var(--accent-purple-subtle);">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+              <div>
+                <h3 class="tier-title">Daily Stack</h3>
+                <span class="tier-subtitle">Core Production Tooling &amp; Daily Frameworks</span>
+              </div>
+            </div>
+
+            <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;margin-bottom:1.25rem;">
+              Technologies used every day for architecting private cloud backends, background services, high-availability proxies, and database persistence.
+            </p>
+
+            <div class="tier-pills">
+              <span class="tech-pill-daily"><i class="fa-solid fa-code"></i> C#</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-cube"></i> ASP.NET Core 8</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-database"></i> EF Core</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-filter"></i> LINQ</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-network-wired"></i> Web API</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-envelope-open-text"></i> RabbitMQ</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-gears"></i> BackgroundService workers</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-server"></i> SQL Server</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+              <span class="tech-pill-daily"><i class="fa-brands fa-linux"></i> Linux</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-arrow-down-up-across-line"></i> NGINX</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-arrows-split-up-and-left"></i> HAProxy (L4)</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-shield-halved"></i> Edge Firewalls &amp; SDN</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-credit-card"></i> Razorpay (e-NACH)</span>
+              <span class="tech-pill-daily"><i class="fa-solid fa-key"></i> Azure AD OAuth</span>
+            </div>
+          </div>
+
+          <!-- Tier 2: Also Worked With -->
+          <div class="tier-card">
+            <div class="tier-header">
+              <div class="tier-icon" style="color:var(--accent-cyan);background:rgba(6,182,212,0.1);">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div>
+                <h3 class="tier-title">Also Worked With</h3>
+                <span class="tier-subtitle">Adjacent Languages, Frameworks &amp; Observability</span>
+              </div>
+            </div>
+
+            <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;margin-bottom:1.25rem;">
+              Technologies utilized across microservices, specialized client plugins, mobile clients, and telemetry dashboards.
+            </p>
+
+            <div class="tier-pills">
+              <span class="tech-pill-secondary"><i class="fa-brands fa-node-js"></i> Node.js</span>
+              <span class="tech-pill-secondary"><i class="fa-solid fa-server"></i> Express</span>
+              <span class="tech-pill-secondary"><i class="fa-brands fa-python"></i> Python (FastAPI)</span>
+              <span class="tech-pill-secondary"><i class="fa-brands fa-golang"></i> Go</span>
+              <span class="tech-pill-secondary"><i class="fa-brands fa-react"></i> React</span>
+              <span class="tech-pill-secondary"><i class="fa-solid fa-mobile-screen"></i> Flutter</span>
+              <span class="tech-pill-secondary"><i class="fa-brands fa-wordpress"></i> WooCommerce / PHP plugins</span>
+              <span class="tech-pill-secondary"><i class="fa-brands fa-docker"></i> Docker</span>
+              <span class="tech-pill-secondary"><i class="fa-solid fa-database"></i> MySQL &amp; SQLite</span>
+              <span class="tech-pill-secondary"><i class="fa-solid fa-chart-line"></i> Prometheus</span>
+              <span class="tech-pill-secondary"><i class="fa-solid fa-magnifying-glass-chart"></i> Elasticsearch</span>
+              <span class="tech-pill-secondary"><i class="fa-solid fa-file-waveform"></i> Serilog</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Education Section -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 06. ACADEMICS</div>
+          <h2 class="section-title">Education</h2>
+          <p class="section-desc">
+            Formal technical degrees and academic distinctions in Computer Science &amp; Engineering.
+          </p>
+        </div>
+
+        <div class="edu-grid">
+          
+          <!-- B.E. Degree -->
+          <div class="edu-card">
+            <div class="edu-header">
+              <h3 class="edu-degree">B.E. Computer Science &amp; Engineering</h3>
+              <span class="edu-year">Aug 2020 – May 2023</span>
+            </div>
+            <div class="edu-institution">Rajiv Gandhi Institute of Technology, Mumbai University</div>
+            <div class="edu-score">
+              <i class="fa-solid fa-award"></i>
+              <span>CGPA: 9.4 / 10 · First Class with Distinction</span>
+            </div>
+          </div>
+
+          <!-- Diploma -->
+          <div class="edu-card">
+            <div class="edu-header">
+              <h3 class="edu-degree">Diploma in Computer Engineering</h3>
+              <span class="edu-year">Jun 2017 – May 2020</span>
+            </div>
+            <div class="edu-institution">Pravin Patil College of Diploma Engineering &amp; Technology, MSBTE</div>
+            <div class="edu-score">
+              <i class="fa-solid fa-award"></i>
+              <span>91.37% · Distinction</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Engineering Notes Section (Blog) -->
+    <section class="section" id="notes">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 07. TECHNICAL WRITING</div>
+          <h2 class="section-title">Engineering Notes</h2>
+          <p class="section-desc">
+            Field notes on distributed consensus, infrastructure state reconciliation, and payment resilience.
+          </p>
+        </div>
+
+        <div class="notes-grid">
+          
+          <!-- Post 1 -->
+          <article class="note-card">
+            <div class="note-tag">Distributed Systems // Infrastructure</div>
+            <h3 class="note-title">"Reconciling infrastructure state against the database"</h3>
+            <p class="note-excerpt">
+              Techniques for detecting and resolving storage and compute drift between bare-metal hypervisor state and relational database records using asynchronous BackgroundService workers.
+            </p>
+            <div class="note-status-badge">
+              <i class="fa-solid fa-pen-nib"></i>
+              <span>[Text to be written by author]</span>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="note-card">
+            <div class="note-tag">Fintech // Payment Engineering</div>
+            <h3 class="note-title">"Designing retry logic for recurring e-NACH payments"</h3>
+            <p class="note-excerpt">
+              Architecting idempotent webhook consumers, exponential backoff retries, and automated account suspension workflows with RabbitMQ and Razorpay.
+            </p>
+            <div class="note-status-badge">
+              <i class="fa-solid fa-pen-nib"></i>
+              <span>[Text to be written by author]</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 08. TRANSMISSION &amp; QUERIES</div>
+          <h2 class="section-title">Send a Query / Transmission</h2>
+          <p class="section-desc">
+            Direct communication channel. Messages submitted here are dispatched immediately to Neel's inbox via Gmail SMTP.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info -->
+          <div class="contact-info-card">
+            <h3>Let's Build Something Resilient</h3>
+            <p>
+              I am currently open to full-time Backend and Platform Engineer roles in Mumbai or remote. Reach out via email or connect on LinkedIn.
+            </p>
+
+            <div class="contact-channels">
+              <div class="contact-channel">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="channel-content">
+                  <strong>DIRECT EMAIL</strong>
+                  <span>neeltilak.1998@gmail.com</span>
+                </div>
+                <button class="copy-pill copy-email-btn" data-email="neeltilak.1998@gmail.com" title="Copy to clipboard">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <a href="https://linkedin.com/in/neel-tilak-74734b231" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <i class="fa-brands fa-linkedin"></i>
+                <div class="channel-content">
+                  <strong>LINKEDIN PROFILE</strong>
+                  <span>linkedin.com/in/neel-tilak-74734b231</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left:auto;font-size:0.85rem;color:var(--text-muted);"></i>
+              </a>
+
+              <a href="https://github.com/NeelTilak" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <i class="fa-brands fa-github"></i>
+                <div class="channel-content">
+                  <strong>GITHUB PROFILE</strong>
+                  <span>github.com/NeelTilak</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left:auto;font-size:0.85rem;color:var(--text-muted);"></i>
+              </a>
+
+              <a href="/resume.pdf" download="Neel_Tilak_Resume.pdf" class="contact-channel">
+                <i class="fa-solid fa-file-pdf"></i>
+                <div class="channel-content">
+                  <strong>DOWNLOAD RESUME</strong>
+                  <span>/resume.pdf (PDF Document)</span>
+                </div>
+                <i class="fa-solid fa-arrow-down" style="margin-left:auto;font-size:0.85rem;color:var(--text-muted);"></i>
+              </a>
+
+              <div class="contact-channel">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="channel-content">
+                  <strong>LOCATION</strong>
+                  <span>Mumbai, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding-top:1.5rem;border-top:1px solid var(--border-subtle);display:flex;align-items:center;gap:0.75rem;">
+              <span class="status-dot"></span>
+              <span style="font-size:0.85rem;color:var(--text-secondary);font-family:var(--font-mono);">
+                Status: Open to Backend / Platform Engineer roles
+              </span>
+            </div>
+          </div>
+
+          <!-- Netlify Contact Form -->
+          <form 
+            class="contact-form" 
+            id="contact-form" 
+            name="contact" 
+            method="POST" 
+            data-netlify="true" 
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact"/>
+            <p style="display:none">
+              <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
+            </p>
+
+            <div class="form-group">
+              <label for="contact-name" class="form-label">YOUR NAME</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Mercer" required autocomplete="name"/>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">YOUR EMAIL ADDRESS</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required autocomplete="email"/>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">SUBJECT // ROLE</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Backend Platform Engineer Opportunity" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">TRANSMISSION MESSAGE</label>
+              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Describe the team, opportunity, or platform challenge..." required></textarea>
+            </div>
+
+            <!-- Anti-Bot & DDoS Security Verification (CAPTCHA) -->
+            <div class="form-group captcha-group">
+              <div class="captcha-header">
+                <label for="captcha-input" class="form-label" style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0;">
+                  <i class="fa-solid fa-shield-halved" style="color:var(--accent-purple);"></i>
+                  <span>SECURITY VERIFICATION</span>
+                </label>
+                <span class="captcha-badge">ANTI-DDOS // HUMAN CHECK</span>
+              </div>
+
+              <div class="captcha-control-box">
+                <div class="captcha-canvas-wrap">
+                  <canvas id="captcha-canvas" width="150" height="42" title="Click to refresh security challenge"></canvas>
+                  <button type="button" id="captcha-refresh-btn" class="captcha-refresh-btn" title="Generate New Code" aria-label="Generate new security code">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                  </button>
+                </div>
+
+                <div class="captcha-input-wrap">
+                  <input 
+                    type="text" 
+                    id="captcha-input" 
+                    name="captcha_input" 
+                    class="form-input captcha-input" 
+                    placeholder="ENTER CODE" 
+                    maxlength="6" 
+                    required 
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <input type="hidden" id="captcha-token" name="captcha_token" value=""/>
+                </div>
+              </div>
+
+              <div id="captcha-feedback" class="captcha-feedback" style="display:none;"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width:100%;justify-content:center;padding:0.95rem;">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">Neel Tilak</div>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">
+            Backend &amp; Cloud Platform Engineer · Mumbai, India
+          </p>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="#hero" class="footer-link">Home</a></li>
+          <li><a href="#about" class="footer-link">About</a></li>
+          <li><a href="#case-studies" class="footer-link">Case Studies</a></li>
+          <li><a href="#open-source" class="footer-link">Open Source</a></li>
+          <li><a href="#skills" class="footer-link">Skills</a></li>
+          <li><a href="/cover-letter.html" class="footer-link">Cover Letter</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Neel Tilak. Built with Linear Slate &amp; Electric Purple aesthetics.
+        </div>
+        <div class="netlify-badge">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Ready for 100/100 Netlify Edge Deployment</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="project-modal-overlay">
+    <div class="modal-container" id="project-modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+        <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <img src="" alt="" class="modal-image" id="modal-img"/>
+
+        <div class="modal-meta-grid">
+          <div class="modal-meta-item">
+            <span>CORE ARCHITECTURE</span>
+            <strong id="modal-arch">Architecture</strong>
+          </div>
+          <div class="modal-meta-item">
+            <span>THROUGHPUT / SCALE</span>
+            <strong id="modal-throughput">Throughput</strong>
+          </div>
+          <div class="modal-meta-item">
+            <span>INFRASTRUCTURE</span>
+            <strong id="modal-cluster">Cluster</strong>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Engineering Overview</h4>
+          <p id="modal-desc"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Technical Innovations &amp; Implementation</h4>
+          <ul class="modal-list" id="modal-features-list"></ul>
+        </div>
+
+        <div class="modal-section">
+          <h4>Technologies Used</h4>
+          <div class="project-tags" id="modal-tags"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Command Palette Modal (Cmd+K) -->
+  <div class="palette-overlay" id="palette-overlay">
+    <div class="palette-modal">
+      <div class="palette-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="palette-input" id="palette-input" placeholder="Type a section or command (e.g. 'case studies', 'resume')..." autocomplete="off"/>
+        <span class="palette-esc-key">ESC</span>
+      </div>
+
+      <div class="palette-results" id="palette-results"></div>
+
+      <div class="palette-footer">
+        <div class="palette-tips">
+          <div class="palette-tip"><kbd>↑</kbd><kbd>↓</kbd> Navigate</div>
+          <div class="palette-tip"><kbd>↵</kbd> Select</div>
+          <div class="palette-tip"><kbd>esc</kbd> Dismiss</div>
+        </div>
+        <div>Spotlight v3.0</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating AI Assistant Chatbot Widget -->
+  <div class="chat-widget" id="chat-widget">
+    <div class="chat-window">
+      <div class="chat-header">
+        <div class="chat-bot-info">
+          <div class="chat-bot-avatar">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="chat-bot-meta">
+            <strong>Neel Platform Bot</strong>
+            <span><i class="fa-solid fa-circle" style="font-size:6px;"></i> Active Assistant</span>
+          </div>
+        </div>
+        <button class="chat-close-btn" id="chat-close-btn" aria-label="Close Chat">&times;</button>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-msg bot">
+          <div class="msg-bubble">
+            Hello! I am Neel's Platform Assistant. Ask me about Indryom (IaaS), his daily .NET 8 / RabbitMQ stack, case studies, or how to contact him in Mumbai!
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-suggestions">
+        <button class="chat-chip" data-prompt="What is your Daily Stack?">Daily Stack</button>
+        <button class="chat-chip" data-prompt="Tell me about Indryom IaaS">Indryom IaaS</button>
+        <button class="chat-chip" data-prompt="What is your work experience?">Experience</button>
+        <button class="chat-chip" data-prompt="How can I contact Neel?">Contact</button>
+      </div>
+
+      <div class="chat-input-bar">
+        <input type="text" class="chat-input" id="chat-input" placeholder="Ask about backend systems, Indryom, C#..." autocomplete="off"/>
+        <button class="chat-send-btn" id="chat-send-btn" aria-label="Send message">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <button class="chat-toggle-btn" id="chat-toggle-btn" aria-label="Open Platform Assistant">
+      <span class="chat-badge" id="chat-badge">1</span>
+      <i class="fa-solid fa-sparkles"></i>
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toast-notification"></div>
+
+  <!-- Scripts -->
+  <script src="js/neural-bg.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/command-palette.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/ai-assistant.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+/* ==========================================================================
+   Interactive Developer Terminal CSS
+   ========================================================================== */
+
+.terminal-section {
+  position: relative;
+  z-index: 2;
+}
+
+.terminal-window {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--term-bg);
+  border: 1px solid var(--term-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.terminal-window.fullscreen {
+  position: fixed;
+  inset: 0.75rem;
+  width: auto;
+  max-width: none;
+  z-index: 9999;
+}
+
+.terminal-header {
+  background: var(--term-header);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--term-border);
+  user-select: none;
+}
+
+.terminal-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.term-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.term-btn:hover {
+  opacity: 0.8;
+}
+
+.term-btn-red {
+  background: #FF5F56;
+}
+
+.term-btn-yellow {
+  background: #FFBD2E;
+}
+
+.term-btn-green {
+  background: #27C93F;
+}
+
+.terminal-title {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.terminal-shortcuts-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.25rem;
+  background: rgba(14, 18, 27, 0.6);
+  border-bottom: 1px solid var(--term-border);
+}
+
+.term-chip-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+
+.term-chip {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--accent-purple-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.term-chip:hover {
+  background: var(--accent-purple-subtle);
+  border-color: var(--accent-purple);
+  color: #FFFFFF;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  min-height: 280px;
+  max-height: 460px;
+  overflow-y: auto;
+  color: var(--term-output);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.terminal-window.fullscreen .terminal-body {
+  max-height: calc(100vh - 180px);
+  min-height: 500px;
+}
+
+.terminal-line {
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.terminal-prompt-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.term-prompt {
+  color: var(--term-prompt);
+  font-weight: 600;
+}
+
+.term-path {
+  color: var(--term-path);
+}
+
+.term-symbol {
+  color: var(--accent-emerald);
+}
+
+.term-input-wrapper {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  caret-color: var(--accent-cyan);
+}
+
+/* Formatted CLI Output Blocks */
+.term-ascii {
+  color: var(--accent-purple-light);
+  font-size: clamp(0.42rem, 1.8vw, 0.75rem);
+  line-height: 1.15;
+  white-space: pre;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.term-table {
+  width: 100%;
+  margin: 0.6rem 0;
+  border-collapse: collapse;
+}
+
+.term-table td {
+  padding: 0.25rem 0.75rem 0.25rem 0;
+  vertical-align: top;
+}
+
+.term-table td.cmd-name {
+  color: var(--accent-cyan);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.term-highlight {
+  color: var(--accent-purple-light);
+  font-weight: 600;
+}
+
+.term-cyan {
+  color: var(--accent-cyan);
+}
+
+.term-green {
+  color: var(--accent-emerald);
+}
+
+.term-dim {
+  color: var(--text-muted);
+}
+
+.term-link {
+  color: var(--accent-purple-light);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.term-link:hover {
+  color: #FFFFFF;
+}
+
+/* Matrix Effect Canvas overlay inside terminal */
+#matrix-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 10;
+}
+
+#matrix-canvas.active {
+  opacity: 0.92;
+  pointer-events: auto;
+}

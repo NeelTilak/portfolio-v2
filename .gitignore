@@ -1,0 +1,22 @@
+# Local credentials & secrets (DO NOT COMMIT)
+config/email.json
+config/email-settings.json
+.env
+.env.local
+appsettings.json
+appsettings.*.json
+
+# System & OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Node & Python caches
+node_modules/
+__pycache__/
+*.pyc
+
+# Temporary test files
+*.tmp
+Profile.pdf
+Neel_Tilak_Resume_Updated.pdf

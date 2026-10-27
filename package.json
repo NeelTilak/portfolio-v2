@@ -1,0 +1,12 @@
+{
+  "name": "neel-tilak-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website of Neel Tilak — Software Engineer | Backend & Cloud Infrastructure",
+  "main": "server.py",
+  "scripts": {
+    "start": "python server.py 8080"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}

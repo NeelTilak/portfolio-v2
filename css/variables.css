@@ -1,0 +1,77 @@
+:root {
+  /* Linear Minimalist Slate Dark Palette */
+  --bg-base: #080A0F;
+  --bg-surface: #0E121B;
+  --bg-surface-elevated: #141A26;
+  --bg-surface-glass: rgba(14, 18, 27, 0.75);
+  --bg-surface-hover: rgba(255, 255, 255, 0.04);
+  
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-accent: rgba(139, 92, 246, 0.4);
+  
+  /* Accent Colors */
+  --accent-purple: #8B5CF6;
+  --accent-purple-light: #A78BFA;
+  --accent-purple-glow: rgba(139, 92, 246, 0.35);
+  --accent-purple-subtle: rgba(139, 92, 246, 0.12);
+  
+  --accent-cyan: #06B6D4;
+  --accent-cyan-light: #38BDF8;
+  --accent-cyan-glow: rgba(6, 182, 212, 0.3);
+  
+  --accent-emerald: #10B981;
+  --accent-amber: #F59E0B;
+  --accent-rose: #F43F5E;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace;
+
+  /* Text Colors */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-inverse: #080A0F;
+
+  /* Terminal Colors */
+  --term-bg: #0A0D14;
+  --term-header: #101522;
+  --term-border: rgba(255, 255, 255, 0.1);
+  --term-text: #E2E8F0;
+  --term-prompt: #8B5CF6;
+  --term-path: #06B6D4;
+  --term-output: #CBD5E1;
+  
+  /* Shadows & Elevations */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 30px -4px rgba(0, 0, 0, 0.6), 0 4px 12px -3px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(139, 92, 246, 0.25);
+  --shadow-glow-cyan: 0 0 30px rgba(6, 182, 212, 0.2);
+
+  /* Layout & Sizing */
+  --max-width: 1200px;
+  --navbar-height: 72px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="cyber-glow"] {
+  --bg-base: #05060A;
+  --bg-surface: #0A0E18;
+  --bg-surface-elevated: #111728;
+  --accent-purple: #9D67FF;
+  --accent-purple-glow: rgba(157, 103, 255, 0.5);
+  --shadow-glow: 0 0 45px rgba(157, 103, 255, 0.4);
+  --border-subtle: rgba(157, 103, 255, 0.15);
+}

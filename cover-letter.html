@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neel Tilak — Cover Letter | Backend &amp; Cloud Platform Engineer</title>
+  <meta name="description" content="Professional Cover Letter of Neel Tilak — Backend &amp; Cloud Platform Engineer specializing in Private Cloud (IaaS), Distributed Workers, and Recurring Billing."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 2.5rem 1rem;
+    }
+
+    .page-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Top Action Bar (hidden on print) */
+    .action-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem;
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      border: 1px solid transparent;
+      font-family: var(--font-sans);
+    }
+
+    .btn-back {
+      background: transparent;
+      color: var(--text-secondary);
+      border-color: var(--border-subtle);
+    }
+    .btn-back:hover {
+      color: #FFFFFF;
+      border-color: var(--border-strong);
+      background: var(--bg-surface-hover);
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, var(--accent-purple), #7C3AED);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4);
+    }
+    .btn-print:hover {
+      background: linear-gradient(135deg, var(--accent-purple-light), var(--accent-purple));
+      transform: translateY(-2px);
+    }
+
+    .btn-copy {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border-color: var(--border-subtle);
+    }
+    .btn-copy:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    /* Document Sheet */
+    .letter-sheet {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg), var(--shadow-glow);
+      padding: 3.5rem;
+      position: relative;
+    }
+
+    /* Letter Header */
+    .letter-header {
+      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 1.75rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .header-name {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+
+    .header-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent-purple-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      text-align: right;
+    }
+
+    .header-meta a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+    .header-meta a:hover {
+      text-decoration: underline;
+    }
+
+    /* Letter Meta (Date & Recipient) */
+    .letter-meta-block {
+      margin-bottom: 1.75rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .recipient-block {
+      margin-top: 1rem;
+      line-height: 1.5;
+      color: var(--text-primary);
+    }
+
+    .recipient-placeholder {
+      color: var(--accent-amber);
+      background: rgba(245, 158, 11, 0.1);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    /* Letter Body */
+    .letter-body {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+    }
+
+    .letter-body p strong {
+      color: var(--text-primary);
+    }
+
+    .highlight-card {
+      background: var(--bg-surface-elevated);
+      border-left: 3px solid var(--accent-purple);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin: 0.5rem 0;
+      color: var(--text-primary);
+    }
+
+    .highlight-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+
+    .highlight-list li {
+      position: relative;
+      padding-left: 1.4rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .highlight-list li strong {
+      color: var(--text-primary);
+    }
+
+    .highlight-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent-purple-light);
+      font-weight: 700;
+    }
+
+    /* Sign-off */
+    .letter-signoff {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .sign-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 0.5rem;
+    }
+
+    .sign-role {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--accent-emerald);
+      color: #FFFFFF;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all var(--transition-normal);
+      z-index: 9999;
+    }
+    .toast.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Print Styles (Clean White Paper PDF Export) */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #111827 !important;
+        padding: 0;
+      }
+      .action-bar,
+      .toast {
+        display: none !important;
+      }
+      .letter-sheet {
+        background: #FFFFFF !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+      .header-name {
+        color: #111827 !important;
+      }
+      .header-title {
+        color: #4F46E5 !important;
+      }
+      .header-meta,
+      .header-meta a {
+        color: #4B5563 !important;
+      }
+      .letter-body {
+        color: #374151 !important;
+      }
+      .letter-body p strong,
+      .highlight-list li strong {
+        color: #111827 !important;
+      }
+      .highlight-card {
+        background: #F9FAFB !important;
+        border-left: 3px solid #4F46E5 !important;
+        color: #111827 !important;
+      }
+      .highlight-list li {
+        color: #374151 !important;
+      }
+      .highlight-list li::before {
+        color: #4F46E5 !important;
+      }
+      .letter-header,
+      .letter-signoff {
+        border-color: #E5E7EB !important;
+      }
+      .sign-name {
+        color: #111827 !important;
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .letter-sheet {
+        padding: 2rem 1.5rem;
+      }
+      .header-meta {
+        text-align: left;
+      }
+      .header-name {
+        font-size: 1.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
+      .action-bar {
+        padding: 0.75rem 1rem;
+      }
+      .letter-sheet {
+        padding: 1.5rem 1rem;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- Action Bar -->
+    <div class="action-bar">
+      <a href="/" class="btn btn-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Portfolio</span>
+      </a>
+
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <button class="btn btn-copy" id="copy-btn">
+          <i class="fa-regular fa-copy"></i>
+          <span>Copy Plain Text</span>
+        </button>
+        <button class="btn btn-print" onclick="window.print()">
+          <i class="fa-solid fa-print"></i>
+          <span>Print / Save as PDF</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Letter Sheet -->
+    <article class="letter-sheet" id="letter-content">
+      <!-- Header -->
+      <header class="letter-header">
+        <div>
+          <h1 class="header-name">Neel Tilak</h1>
+          <div class="header-title">Software Engineer | Backend &amp; Cloud Infrastructure | 0-to-1 Systems Builder</div>
+          <div style="font-size:0.88rem;color:var(--text-muted);">Mumbai, Maharashtra, India</div>
+        </div>
+
+        <div class="header-meta">
+          <div><i class="fa-solid fa-envelope"></i> <a href="mailto:neeltilak.1998@gmail.com">neeltilak.1998@gmail.com</a></div>
+          <div><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/neel-tilak-74734b231" target="_blank">linkedin.com/in/neel-tilak-74734b231</a></div>
+          <div><i class="fa-brands fa-github"></i> <a href="https://github.com/NeelTilak" target="_blank">github.com/NeelTilak</a></div>
+          <div><i class="fa-solid fa-globe"></i> <a href="https://neeltilak.netlify.app" target="_blank">neeltilak.netlify.app</a></div>
+        </div>
+      </header>
+
+      <!-- Recipient Block -->
+      <div class="letter-meta-block">
+        <div>October 24, 2026</div>
+        <div class="recipient-block">
+          <strong>Hiring Team / Engineering Leadership</strong><br/>
+          <span class="recipient-placeholder">[Company Name]</span> · <span class="recipient-placeholder">[Team / Department]</span><br/>
+          <strong>Re: Application for Software Engineer / Backend &amp; Cloud Infrastructure Engineer</strong>
+        </div>
+      </div>
+
+      <!-- Letter Body -->
+      <div class="letter-body">
+        <p>
+          Dear Hiring Team,
+        </p>
+
+        <p>
+          I am writing to express my strong interest in joining your engineering organization as a <strong>Software Engineer / Backend &amp; Cloud Infrastructure Engineer</strong>. With over 3 years of hands-on experience specializing in backend architecture, distributed systems, and private cloud platforms, I am a proven 0-to-1 systems builder who has architected and delivered enterprise production systems from scratch across Cloud IaaS, Luxury E-Commerce, Fintech, and CRMs.
+        </p>
+
+        <p>
+          Currently, at <strong>Hirdhav Software</strong>, I lead the core backend architecture and infrastructure automation for <strong>Indryom</strong>, a proprietary Private Cloud (IaaS) platform. In this role, I bridge high-level domain application logic directly with bare-metal virtualization nodes, software-defined networking fabrics, and asynchronous job queues:
+        </p>
+
+        <div class="highlight-card">
+          <ul class="highlight-list">
+            <li>
+              <strong>Virtualization &amp; Compute:</strong> Architected core backend APIs and domain models using <strong>C#, ASP.NET Core 8, and Entity Framework Core (EF Core)</strong>, automating lifecycle provisioning, dynamic disk sizing, and teardown of KVM VMs and LXC Containers via Type-1 hypervisor REST APIs (KVM/QEMU) in under 30 seconds.
+            </li>
+            <li>
+              <strong>ORM &amp; State Persistence:</strong> Designed high-performance data access layers and database migrations with EF Core and SQL Server, enforcing strict transactional consistency across cloud tenant resources.
+            </li>
+            <li>
+              <strong>High-Availability Networking &amp; L4 LB:</strong> Architected a Layer 4 HAProxy load balancing service featuring live health checks and round-robin traffic routing, achieving sub-5ms routing latency across scaled backend container replicas.
+            </li>
+            <li>
+              <strong>Network Automation &amp; SDN:</strong> Integrated edge firewall appliances and software-defined networking (SDN) for automated 1:1 Public IP NAT, DNAT, and stateful traffic filtering; designed shared VXLAN overlay bridges and edge NGINX gateways.
+            </li>
+            <li>
+              <strong>Storage &amp; State Reconciliation:</strong> Built transactional storage workflows supporting dynamic disk resizing and automated snapshot-based storage backups with state reconciliation between SQL Server and physical hypervisors.
+            </li>
+            <li>
+              <strong>Workers &amp; Usage Metering:</strong> Built resilient BackgroundService workers and RabbitMQ consumers for real-time compute usage tracking, invoice calculation, and automated billing suspension.
+            </li>
+            <li>
+              <strong>Zero-Trust IAM &amp; Observability:</strong> Implemented multi-tenant IAM with Azure AD OAuth, TOTP 2FA (AES-256 encrypted), and isolated short-lived identity handoff tokens for cross-portal support. Centralized application audit logs via Elasticsearch and cluster health telemetry via Prometheus for end-to-end multi-node observability.
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          Beyond infrastructure platforms, I bring a proven track record of 0-to-1 solo product deliveries:
+        </p>
+
+        <div class="highlight-card">
+          <ul class="highlight-list">
+            <li>
+              <strong>SaturnnLGD (Luxury Diamond E-Commerce):</strong> Built ASP.NET Core 8 Web APIs, MVC admin portal, and Flutter mobile app; engineered custom WooCommerce and PHP plugins from scratch by reading carrier REST/SOAP API specifications to automate Blue Dart shipping, digital waybill generation, tracking webhooks, and PDF tax invoicing.
+            </li>
+            <li>
+              <strong>KIFS Home Loan Platform:</strong> Developed a Flutter mobile application and backend pipelines for digital loan origination, document verification, and multi-stage approval workflows deployed behind NGINX.
+            </li>
+            <li>
+              <strong>Terado Engineering (Uni5 HRMS &amp; PTEcolyzer CRM):</strong> Engineered RESTful backend microservices in Node.js, Express.js, and Sequelize ORM backed by MySQL for Uni5 HRMS (geolocation attendance, employee management) and PTEcolyzer CRM (lead pipelines, automated environmental alerts), optimizing database query execution plans to reduce API latency.
+            </li>
+            <li>
+              <strong>Freelance &amp; Banking Back-Office:</strong> Built full-stack modules using .NET and React with SSO authentication and payment gateways, having previously developed SSO login APIs and tuned SQL Server stored procedures for banking back-office workflows at Optimum Financial Solutions.
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          Academically, I hold a <strong>Bachelor of Engineering in Computer Science &amp; Engineering</strong> from Rajiv Gandhi Institute of Technology (Mumbai University) with a <strong>9.4 / 10 CGPA</strong> (First Class with Distinction), backed by a Diploma in Computer Engineering with <strong>91.37%</strong> (Distinction). This rigorous grounding enables me to reason about systems from first principles, whether designing scalable message broker topologies, profiling database indexing strategies, or optimizing kernel networking.
+        </p>
+
+        <p>
+          I am eager to bring my ownership mindset, deep curiosity for distributed systems, and passion for reliable backend engineering to your team. I would welcome the opportunity to discuss how my technical background and practical delivery experience align with your platform goals.
+        </p>
+
+        <p>
+          Thank you for your time and consideration.
+        </p>
+
+        <div class="letter-signoff">
+          <div>Sincerely,</div>
+          <div class="sign-name">Neel Tilak</div>
+          <div class="sign-role">Software Engineer | Backend &amp; Cloud Infrastructure | 0-to-1 Systems Builder</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);margin-top:0.25rem;">
+            neeltilak.1998@gmail.com · Mumbai, India
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="toast" id="toast">Plain text copied to clipboard!</div>
+
+  <script>
+    const copyBtn = document.getElementById('copy-btn');
+    const toast = document.getElementById('toast');
+
+    copyBtn.addEventListener('click', () => {
+      const text = `NEEL TILAK
+Software Engineer | Backend & Cloud Infrastructure | 0-to-1 Systems Builder
+Mumbai, Maharashtra, India
+Email: neeltilak.1998@gmail.com
+LinkedIn: https://linkedin.com/in/neel-tilak-74734b231
+GitHub: https://github.com/NeelTilak
+Portfolio: https://neeltilak.netlify.app
+
+October 24, 2026
+
+Hiring Team / Engineering Leadership
+[Company Name] · [Team / Department]
+Re: Application for Software Engineer / Backend & Cloud Infrastructure Engineer
+
+Dear Hiring Team,
+
+I am writing to express my strong interest in joining your engineering organization as a Software Engineer / Backend & Cloud Infrastructure Engineer. With over 3 years of hands-on experience specializing in backend architecture, distributed systems, and private cloud platforms, I am a proven 0-to-1 systems builder who has architected and delivered enterprise production systems from scratch across Cloud IaaS, Luxury E-Commerce, Fintech, and CRMs.
+
+Currently, at Hirdhav Software, I lead the core backend architecture and infrastructure automation for Indryom, a proprietary Private Cloud (IaaS) platform. In this role, I bridge high-level domain application logic directly with bare-metal virtualization nodes, software-defined networking fabrics, and asynchronous job queues:
+
+• Virtualization & Compute: Architected core backend APIs and domain models using C#, ASP.NET Core 8, and Entity Framework Core (EF Core), automating lifecycle provisioning, dynamic disk sizing, and teardown of KVM VMs and LXC Containers via Type-1 hypervisor REST APIs (KVM/QEMU) in under 30 seconds.
+• ORM & State Persistence: Designed high-performance data access layers and database migrations with EF Core and SQL Server, enforcing strict transactional consistency across cloud tenant resources.
+• High-Availability Networking & L4 LB: Architected a Layer 4 HAProxy load balancing service featuring live health checks and round-robin traffic routing, achieving sub-5ms routing latency across scaled backend container replicas.
+• Network Automation & SDN: Integrated edge firewall appliances and software-defined networking (SDN) for automated 1:1 Public IP NAT, DNAT, and stateful traffic filtering; designed shared VXLAN overlay bridges and edge NGINX gateways.
+• Storage & State Reconciliation: Built transactional storage workflows supporting dynamic disk resizing and automated snapshot-based storage backups with state reconciliation between SQL Server and physical hypervisors.
+• Workers & Usage Metering: Built resilient BackgroundService workers and RabbitMQ consumers for real-time compute usage tracking, invoice calculation, and automated billing suspension.
+• Zero-Trust IAM & Observability: Implemented multi-tenant IAM with Azure AD OAuth, TOTP 2FA (AES-256 encrypted), and isolated short-lived identity handoff tokens for cross-portal support. Centralized application audit logs via Elasticsearch and cluster health telemetry via Prometheus for end-to-end multi-node observability.
+
+Beyond infrastructure platforms, I bring a proven track record of 0-to-1 solo product deliveries:
+• SaturnnLGD (Luxury Diamond E-Commerce): Built ASP.NET Core 8 Web APIs, MVC admin portal, and Flutter mobile app; engineered custom WooCommerce and PHP plugins from scratch by reading carrier REST/SOAP API specifications to automate Blue Dart shipping, digital waybill generation, tracking webhooks, and PDF tax invoicing.
+• KIFS Home Loan Platform: Developed a Flutter mobile application and backend pipelines for digital loan origination, document verification, and multi-stage approval workflows deployed behind NGINX.
+• Terado Engineering (Uni5 HRMS & PTEcolyzer CRM): Engineered RESTful backend microservices in Node.js, Express.js, and Sequelize ORM backed by MySQL for Uni5 HRMS (geolocation attendance, employee management) and PTEcolyzer CRM (lead pipelines, automated environmental alerts), optimizing database query execution plans to reduce API latency.
+• Freelance & Banking Back-Office: Built full-stack modules using .NET and React with SSO authentication and payment gateways, having previously developed SSO login APIs and tuned SQL Server stored procedures for banking back-office workflows at Optimum Financial Solutions.
+
+Academically, I hold a Bachelor of Engineering in Computer Science & Engineering from Rajiv Gandhi Institute of Technology (Mumbai University) with a 9.4 / 10 CGPA (First Class with Distinction), backed by a Diploma in Computer Engineering with 91.37% (Distinction). This rigorous grounding enables me to reason about systems from first principles, whether designing scalable message broker topologies, profiling database indexing strategies, or optimizing kernel networking.
+
+I am eager to bring my ownership mindset, deep curiosity for distributed systems, and passion for reliable backend engineering to your team. I would welcome the opportunity to discuss how my technical background and practical delivery experience align with your platform goals.
+
+Thank you for your time and consideration.
+
+Sincerely,
+Neel Tilak
+Software Engineer | Backend & Cloud Infrastructure | 0-to-1 Systems Builder
+neeltilak.1998@gmail.com · Mumbai, India`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        toast.classList.add('active');
+        setTimeout(() => toast.classList.remove('active'), 3000);
+      });
+    });
+  </script>
+</body>
+</html>
