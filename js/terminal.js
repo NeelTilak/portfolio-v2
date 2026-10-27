@@ -243,10 +243,19 @@
         break;
 
       case 'theme':
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'cyber-glow' ? 'default' : 'cyber-glow';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        appendLine(`<span class="term-green">✔ Switched visual theme to: ${newTheme}</span>`);
+        if (window.toggleTheme) {
+          const t = window.toggleTheme();
+          appendLine(`<span class="term-green">✔ Switched visual theme to: ${t === 'light' ? 'Light Mode ☀️' : 'Dark Mode 🌙'}</span>`);
+        } else {
+          const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          if (newTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          appendLine(`<span class="term-green">✔ Switched visual theme to: ${newTheme}</span>`);
+        }
         break;
 
       default:

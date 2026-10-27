@@ -128,7 +128,8 @@ exports.handler = async (event, context) => {
     const smtpPass = process.env.SMTP_PASS || 'oapi iyrb yxjx cufo';
     const toEmail = process.env.TO_EMAIL || 'neeltilak23@gmail.com';
 
-    const transporter = nodemailer.createTransporter({
+    const nm = typeof nodemailer.createTransport === 'function' ? nodemailer : (nodemailer.default || nodemailer);
+    const transporter = nm.createTransport({
       host: 'smtp.gmail.com',
       port: 587,
       secure: false,

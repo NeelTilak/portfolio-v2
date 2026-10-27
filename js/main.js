@@ -442,17 +442,60 @@
     });
   }
 
-  // 8. Theme Toggle Button
+  // 8. Theme Toggle Button (Light / Dark Mode with Persistence)
   const themeToggle = document.getElementById('theme-toggle');
+
+  function applyTheme(theme) {
+    const root = document.documentElement;
+    if (theme === 'light') {
+      root.setAttribute('data-theme', 'light');
+    } else {
+      root.removeAttribute('data-theme');
+    }
+
+    try {
+      localStorage.setItem('portfolio-theme', theme);
+    } catch (e) {}
+
+    if (themeToggle) {
+      const icon = themeToggle.querySelector('i');
+      if (icon) {
+        if (theme === 'light') {
+          icon.className = 'fa-solid fa-moon';
+          themeToggle.setAttribute('title', 'Switch to Dark Mode');
+          themeToggle.setAttribute('aria-label', 'Switch to Dark Mode');
+        } else {
+          icon.className = 'fa-regular fa-sun';
+          themeToggle.setAttribute('title', 'Switch to Light Mode');
+          themeToggle.setAttribute('aria-label', 'Switch to Light Mode');
+        }
+      }
+    }
+  }
+
+  // Initial load from storage
+  let activeTheme = 'dark';
+  try {
+    activeTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  } catch (e) {}
+  applyTheme(activeTheme);
+
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      const root = document.documentElement;
-      const current = root.getAttribute('data-theme');
-      const next = current === 'cyber-glow' ? 'default' : 'cyber-glow';
-      root.setAttribute('data-theme', next);
-      showToast(`Visual theme: ${next === 'cyber-glow' ? 'Cyber Glow' : 'Slate Minimal'}`);
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      const next = isLight ? 'dark' : 'light';
+      applyTheme(next);
+      showToast(`Switched to ${next === 'light' ? 'Light Mode ☀️' : 'Dark Mode 🌙'}`);
     });
   }
+
+  window.toggleTheme = function () {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const next = isLight ? 'dark' : 'light';
+    applyTheme(next);
+    showToast(`Switched to ${next === 'light' ? 'Light Mode ☀️' : 'Dark Mode 🌙'}`);
+    return next;
+  };
 
   // 9. Initialize Typewriter
   typeEffect();
