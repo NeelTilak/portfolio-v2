@@ -379,10 +379,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding-top: calc(var(--navbar-height) + 2rem);
-  padding-bottom: 4rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(var(--navbar-height) + 1.5rem);
+  padding-bottom: 3.5rem;
   position: relative;
+  width: 100%;
 }
 
 .hero-grid {
@@ -390,7 +392,6 @@ body {
   grid-template-columns: 1.15fr 0.95fr;
   gap: 2.5rem;
   align-items: center;
-  margin: auto 0;
   width: 100%;
 }
 
@@ -2158,7 +2159,7 @@ body {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     text-align: center;
-    margin: 0;
+    width: 100%;
   }
   .hero-content {
     display: flex;
