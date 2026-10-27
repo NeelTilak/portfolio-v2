@@ -352,7 +352,8 @@ body {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
   padding-top: calc(var(--navbar-height) + 2rem);
   padding-bottom: 4rem;
   position: relative;
@@ -363,6 +364,8 @@ body {
   grid-template-columns: 1.25fr 0.95fr;
   gap: 3.5rem;
   align-items: center;
+  margin: auto 0;
+  width: 100%;
 }
 
 .hero-content {
@@ -2091,10 +2094,22 @@ body {
 
 /* Tablet & Medium Laptops (max-width: 1024px) */
 @media (max-width: 1024px) {
+  .brand-badge {
+    display: none !important;
+  }
+  .scroll-cue {
+    display: none !important;
+  }
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--navbar-height) + 1.5rem);
+    padding-bottom: 3rem;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 3.5rem;
+    gap: 2.5rem;
     text-align: center;
+    margin: 0;
   }
   .hero-content {
     display: flex;
@@ -2110,6 +2125,37 @@ body {
   }
   .hero-actions {
     justify-content: center;
+  }
+  .hero-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 340px;
+    margin: 1rem auto 0;
+    justify-items: center;
+    align-items: center;
+  }
+  .avatar-wrapper {
+    grid-column: span 2;
+    width: 210px;
+    height: 210px;
+    margin-bottom: 0.4rem;
+  }
+  .floating-chip {
+    position: static !important;
+    animation: none !important;
+    width: 100%;
+    justify-content: center;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.55rem;
+    white-space: normal;
+    text-align: center;
+    gap: 0.35rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .floating-chip i {
+    font-size: 0.85rem;
   }
   .metrics-strip {
     grid-template-columns: repeat(2, 1fr);
