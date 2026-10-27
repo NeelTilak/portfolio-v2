@@ -185,6 +185,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .nav-brand {
@@ -193,6 +194,8 @@ body {
   gap: 0.75rem;
   text-decoration: none;
   color: var(--text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .brand-icon {
@@ -207,8 +210,9 @@ body {
   color: var(--accent-purple-light);
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   box-shadow: var(--shadow-glow);
+  flex-shrink: 0;
 }
 
 .brand-text {
@@ -216,23 +220,16 @@ body {
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.02em;
-}
-
-.brand-badge {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.1);
-  padding: 0.15rem 0.45rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(6, 182, 212, 0.25);
+  white-space: nowrap;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.5rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
@@ -240,6 +237,7 @@ body {
   color: var(--text-secondary);
   font-size: 0.92rem;
   font-weight: 500;
+  white-space: nowrap;
   transition: color var(--transition-fast);
   position: relative;
   padding: 0.5rem 0;
@@ -266,6 +264,32 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.nav-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--accent-purple-subtle);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-purple-light);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.nav-cta-btn:hover {
+  background: var(--accent-purple);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
 }
 
 /* Command Palette Hint Button */
@@ -280,6 +304,8 @@ body {
   border-radius: var(--radius-md);
   font-family: var(--font-mono);
   font-size: 0.8rem;
+  white-space: nowrap;
+  flex-shrink: 0;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -422,12 +448,13 @@ body {
 
 .typewriter-wrapper {
   font-family: var(--font-mono);
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.92rem, 2.2vw, 1.35rem);
   color: var(--text-secondary);
   margin-bottom: 1.25rem;
   min-height: 2.2rem;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .typewriter-prefix {

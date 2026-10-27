@@ -6,10 +6,10 @@
 (function () {
   // 1. Typewriter Effect
   const roles = [
-    'Software Engineer — Backend & Cloud Infrastructure',
-    '0-to-1 Systems Builder',
-    'Private Cloud Platform Architect (Indryom)',
-    'C# · ASP.NET Core 8 · RabbitMQ · Linux'
+    'Backend & Cloud Platform Engineer',
+    '0-to-1 Cloud Systems Builder',
+    'C# · ASP.NET Core 8 · RabbitMQ',
+    'Distributed Workers & e-NACH Billing'
   ];
 
   const roleEl = document.getElementById('typewriter-role');
