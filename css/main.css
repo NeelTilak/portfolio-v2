@@ -16,6 +16,9 @@ html {
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -25,6 +28,8 @@ body {
   overflow-x: hidden;
   position: relative;
   line-height: 1.6;
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* Custom Scrollbar */
@@ -137,6 +142,18 @@ body {
 
 .glass-panel:hover {
   border-color: var(--border-strong);
+}
+
+.about-panel {
+  padding: 3.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.terminal-input-bar {
+  padding: 0.75rem 1.5rem;
+  background: var(--term-bg);
+  border-top: 1px solid var(--term-border);
 }
 
 /* ==========================================================================
@@ -316,7 +333,17 @@ body {
   width: 22px;
   height: 2px;
   background: var(--text-primary);
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ==========================================================================
@@ -343,7 +370,6 @@ body {
   z-index: 2;
 }
 
-/* Status Pill */
 .hero-status-pill {
   display: inline-flex;
   align-items: center;
@@ -355,6 +381,11 @@ body {
   font-size: 0.85rem;
   color: #A7F3D0;
   margin-bottom: 1.5rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .status-dot {
@@ -2085,6 +2116,7 @@ body {
   }
   .carousel-card {
     flex: 0 0 calc((100% - 1.5rem) / 2);
+    min-width: 0;
   }
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2105,24 +2137,36 @@ body {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+  .about-panel {
+    padding: 2.5rem 1.75rem;
+  }
 }
 
-/* Tablets & Large Phones (max-width: 768px) */
+/* Tablets & Mobile Phones (max-width: 768px) */
 @media (max-width: 768px) {
   .section {
-    padding: 4.5rem 0;
+    padding: 4rem 0;
   }
   .section-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.25rem;
   }
   .section-title {
     font-size: 2rem;
   }
   .glass-panel {
-    padding: 2rem 1.5rem !important;
+    padding: 1.75rem 1.25rem !important;
+  }
+  .about-panel {
+    padding: 1.75rem 1.25rem !important;
   }
 
-  /* Navbar Mobile Drawer */
+  /* Navbar Mobile Layout */
+  .brand-badge {
+    display: none !important;
+  }
+  .nav-container {
+    padding: 0 1rem;
+  }
   .nav-menu,
   .cmd-k-btn {
     display: none;
@@ -2158,132 +2202,189 @@ body {
 
   /* Hero Section */
   .hero {
-    padding-top: calc(var(--navbar-height) + 1.5rem);
-    padding-bottom: 3rem;
+    padding-top: calc(var(--navbar-height) + 1.25rem);
+    padding-bottom: 2.5rem;
   }
   .hero-title {
-    font-size: 2.35rem;
+    font-size: 2.25rem;
   }
   .typewriter-wrapper {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+    min-height: 2.5rem;
   }
   .hero-desc {
-    font-size: 1.02rem;
+    font-size: 1rem;
+  }
+
+  /* Responsive Hero Avatar & Framed Badge Grid */
+  .hero-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.55rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
   }
   .avatar-wrapper {
-    width: 260px;
-    height: 260px;
+    grid-column: span 2;
+    width: 190px;
+    height: 190px;
+    margin-bottom: 0.4rem;
   }
   .floating-chip {
-    padding: 0.4rem 0.7rem;
-    font-size: 0.75rem;
+    position: static !important;
+    animation: none !important;
+    width: 100%;
+    justify-content: center;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.55rem;
+    white-space: normal;
+    text-align: center;
+    gap: 0.35rem;
+    box-shadow: var(--shadow-sm);
   }
-  .chip-1 { left: -8px; top: -12px; }
-  .chip-2 { right: -8px; top: 25px; }
-  .chip-3 { left: -8px; bottom: 25px; }
-  .chip-4 { right: -8px; bottom: -12px; }
+  .floating-chip i {
+    font-size: 0.85rem;
+  }
 
   /* Grids & Cards */
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  .oss-grid {
-    grid-template-columns: 1fr;
-  }
-  .edu-grid {
-    grid-template-columns: 1fr;
-  }
-  .notes-grid {
-    grid-template-columns: 1fr;
-  }
+  .projects-grid,
+  .oss-grid,
+  .edu-grid,
+  .notes-grid,
   .metrics-strip {
     grid-template-columns: 1fr;
   }
   .carousel-card {
     flex: 0 0 100%;
+    min-width: 0 !important;
   }
 
   /* Timeline */
   .timeline {
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
   }
   .timeline-marker {
-    left: -1.5rem;
+    left: -1.25rem;
   }
   .timeline-content {
-    padding: 1.25rem;
+    padding: 1.25rem 1rem;
+    word-break: break-word;
   }
   .timeline-header {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  /* Modals */
-  .modal-meta-grid {
-    grid-template-columns: 1fr;
-  }
-  .modal-header {
-    padding: 1.25rem 1.5rem;
-  }
-  .modal-body {
-    padding: 1.5rem;
-  }
-  .modal-container {
-    max-height: 85vh;
+    gap: 0.35rem;
   }
 
   /* Terminal */
   .terminal-window {
     border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 100%;
   }
   .terminal-header {
-    padding: 0.65rem 1rem;
+    padding: 0.65rem 0.85rem;
   }
   .terminal-shortcuts-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 0.5rem 0.75rem;
+    scrollbar-width: none;
+    gap: 0.4rem;
+  }
+  .terminal-shortcuts-bar::-webkit-scrollbar {
+    display: none;
   }
   .term-chip {
     font-size: 0.72rem;
-    padding: 0.2rem 0.45rem;
+    padding: 0.2rem 0.5rem;
+    flex-shrink: 0;
   }
   .terminal-body {
-    padding: 1rem;
+    padding: 1rem 0.85rem;
     font-size: 0.82rem;
     max-height: 380px;
+    overflow-x: auto;
+    word-break: break-word;
+  }
+  .terminal-input-bar {
+    padding: 0.6rem 0.85rem;
+  }
+  .term-ascii {
+    font-size: clamp(0.28rem, 1.4vw, 0.62rem);
+    overflow-x: auto;
   }
 
-  /* Contact */
+  /* Modals */
+  .modal-container {
+    width: calc(100vw - 1.5rem);
+    max-width: 100%;
+    max-height: 85vh;
+  }
+  .modal-meta-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-header {
+    padding: 1.15rem 1.25rem;
+  }
+  .modal-body {
+    padding: 1.25rem;
+  }
+
+  /* Contact & CAPTCHA */
   .contact-info-card,
   .contact-form {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1.15rem;
+  }
+  .captcha-control-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .captcha-canvas-wrap {
+    width: 100%;
+    justify-content: center;
+  }
+  .captcha-input-wrap {
+    width: 100%;
+  }
+  .captcha-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
   }
 }
 
 /* Small Phones & Extra-Small Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 0.85rem;
   }
   .section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
   .section-tag {
-    font-size: 0.72rem;
-    padding: 0.25rem 0.65rem;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
   }
   .hero-status-pill {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.65rem;
   }
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.95rem;
   }
   .typewriter-wrapper {
-    font-size: 0.95rem;
-    min-height: 2.8rem;
+    font-size: 0.92rem;
+    min-height: 2.6rem;
   }
   .hero-desc {
     font-size: 0.92rem;
@@ -2303,34 +2404,28 @@ body {
     padding: 0.7rem 1rem;
   }
 
-  /* Avatar & Tucked Floating Chips */
   .avatar-wrapper {
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
+    width: 165px;
+    height: 165px;
+    border-radius: 18px;
   }
   .avatar-img {
-    border-radius: 15px;
+    border-radius: 14px;
   }
   .floating-chip {
-    padding: 0.35rem 0.55rem;
     font-size: 0.68rem;
-    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.45rem;
   }
-  .chip-1 { left: -4px; top: -10px; }
-  .chip-2 { right: -4px; top: 15px; }
-  .chip-3 { left: -4px; bottom: 15px; }
-  .chip-4 { right: -4px; bottom: -10px; }
 
   /* Terminal on Small Phone */
   .terminal-title span {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
   }
   .terminal-input {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
   .terminal-prompt-line {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
   }
 
   /* Cards Padding */
@@ -2339,24 +2434,24 @@ body {
   .tier-card,
   .edu-card,
   .note-card {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 0.85rem;
   }
   .project-thumbnail {
-    height: 180px;
+    height: 170px;
   }
   .project-title,
   .oss-title,
   .tier-title,
   .edu-degree,
   .note-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   /* Contact Channels */
   .contact-channel {
     flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0.75rem;
+    gap: 0.45rem;
+    padding: 0.65rem;
   }
   .copy-pill {
     margin-left: 0;
@@ -2364,52 +2459,45 @@ body {
 
   /* Chatbot Widget */
   .chat-widget {
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0.85rem;
+    right: 0.85rem;
   }
   .chat-toggle-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 1.2rem;
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
   }
   .chat-window {
-    width: calc(100vw - 1.5rem);
-    height: 460px;
-    bottom: 0.5rem;
-    right: 0.5rem;
+    width: calc(100vw - 1rem);
+    height: 440px;
+    bottom: 0.4rem;
+    right: 0.4rem;
   }
 
   /* Palette Modal */
   .palette-overlay {
-    padding: 3rem 0.75rem 1rem;
+    padding: 2.5rem 0.5rem 1rem;
   }
   .palette-input {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
 /* Extra-Narrow Phones (iPhone SE, Galaxy Fold 320px–360px) */
 @media (max-width: 360px) {
   .hero-title {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
   }
   .avatar-wrapper {
-    width: 175px;
-    height: 175px;
+    width: 145px;
+    height: 145px;
   }
   .floating-chip {
     font-size: 0.62rem;
-    padding: 0.25rem 0.45rem;
+    padding: 0.25rem 0.4rem;
   }
-  .chip-1 { left: -2px; top: -8px; }
-  .chip-2 { right: -2px; top: 10px; }
-  .chip-3 { left: -2px; bottom: 10px; }
-  .chip-4 { right: -2px; bottom: -8px; }
   .brand-text {
     font-size: 0.95rem;
-  }
-  .brand-badge {
-    display: none;
   }
 }
 

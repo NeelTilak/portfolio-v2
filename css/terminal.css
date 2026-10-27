@@ -241,3 +241,29 @@
   opacity: 0.92;
   pointer-events: auto;
 }
+
+@media (max-width: 768px) {
+  .terminal-shortcuts-bar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 0.5rem 0.75rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.4rem;
+  }
+  .terminal-shortcuts-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .term-chip {
+    flex-shrink: 0;
+  }
+  .terminal-body {
+    padding: 1rem 0.85rem;
+    font-size: 0.82rem;
+    overflow-x: auto;
+  }
+  .term-ascii {
+    font-size: clamp(0.28rem, 1.4vw, 0.62rem);
+    overflow-x: auto;
+  }
+}
